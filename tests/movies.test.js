@@ -9,7 +9,7 @@ describe("GET /api/movies", () => {
   });
 });
 
-describe("GET /api/movies/1", () => {
+describe("GET /api/movies/:id", () => {
   it("should return movie info json", async () => {
     const response = await request(app).get("/api/movies/1");
     expect(response.headers["content-type"]).toMatch(/json/);
